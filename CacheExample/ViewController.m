@@ -47,6 +47,13 @@
 			self.serverImage.image = nil;
 			
 			self.serverImage.backgroundColor = [UIColor redColor];
+			
+			NSLog(@"loadFromServer error: %@", error);
+			[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error loading from server", nil)
+										message:[error localizedDescription]
+									   delegate:self
+							  cancelButtonTitle:NSLocalizedString(@"Ok", nil)
+							  otherButtonTitles:nil] show];
 		}
 		
 		[self.serverIndicator stopAnimating];
@@ -70,6 +77,13 @@
 			self.cacheImage.image = nil;
 			
 			self.cacheImage.backgroundColor = [UIColor redColor];
+			
+			NSLog(@"loadFromCache error: %@", error);
+			[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error loading from cache", nil)
+										message:[error localizedDescription]
+									   delegate:self
+							  cancelButtonTitle:NSLocalizedString(@"Ok", nil)
+							  otherButtonTitles:nil] show];
 		}
 		
 		[self.cacheIndicator stopAnimating];
@@ -83,7 +97,7 @@
 
 - (IBAction)testCache:(id)sender
 {
-	NSLog(@"[[NSURLCache sharedURLCache] currentDiskUsage]: %d", [[NSURLCache sharedURLCache] currentDiskUsage]);
+	NSLog(@"[[NSURLCache sharedURLCache] currentDiskUsage]: %lu", (unsigned long)[[NSURLCache sharedURLCache] currentDiskUsage]);
 }
 
 @end
