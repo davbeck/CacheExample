@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ohg-yH-HJh">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Load From Cache">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadFromCache:" destination="2" eventType="touchUpInside" id="8G6-nX-mVS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuF-s2-34Y">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Load From Server">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadFromServer:" destination="2" eventType="touchUpInside" id="6YW-cg-8Fx"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="V5u-Me-ioY">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Lpl-VM-g75">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="loO-aK-brp"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="FHB-nv-U1U"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lv-Wn-xdN">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Clear Cache">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCache:" destination="2" eventType="touchUpInside" id="UqE-dO-2ty"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhY-jK-5Um">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Test Cache">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testCache:" destination="2" eventType="touchUpInside" id="GoS-80-zMZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="loO-aK-brp" firstAttribute="centerY" secondItem="V5u-Me-ioY" secondAttribute="centerY" type="user" id="1w8-n7-o9y"/>
+                            <constraint firstItem="HhY-jK-5Um" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="user" id="2k2-he-afl"/>
+                            <constraint firstItem="FHB-nv-U1U" firstAttribute="leading" secondItem="loO-aK-brp" secondAttribute="leading" type="user" id="3nO-4E-tTg"/>
+                            <constraint firstAttribute="trailing" secondItem="HhY-jK-5Um" secondAttribute="trailing" constant="20" symbolic="YES" type="user" id="3pw-zY-kVE"/>
+                            <constraint firstItem="HhY-jK-5Um" firstAttribute="leading" secondItem="8lv-Wn-xdN" secondAttribute="trailing" constant="8" symbolic="YES" type="user" id="639-Ha-1HD"/>
+                            <constraint firstItem="8lv-Wn-xdN" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="18" type="user" id="7rA-b0-WNH"/>
+                            <constraint firstItem="V5u-Me-ioY" firstAttribute="top" secondItem="8lv-Wn-xdN" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Ba5-FK-GUP"/>
+                            <constraint firstItem="Ohg-yH-HJh" firstAttribute="top" secondItem="Lpl-VM-g75" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="EaJ-10-sIV"/>
+                            <constraint firstAttribute="trailing" secondItem="V5u-Me-ioY" secondAttribute="trailing" constant="20" symbolic="YES" type="user" id="F7u-3i-kmb"/>
+                            <constraint firstItem="V5u-Me-ioY" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="user" id="J4x-Ec-kmB"/>
+                            <constraint firstItem="loO-aK-brp" firstAttribute="centerX" secondItem="V5u-Me-ioY" secondAttribute="centerX" type="user" id="JyA-o8-eix"/>
+                            <constraint firstItem="8lv-Wn-xdN" firstAttribute="baseline" secondItem="HhY-jK-5Um" secondAttribute="baseline" type="user" id="KgZ-3Q-CXc"/>
+                            <constraint firstItem="Ohg-yH-HJh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ojd-iw-dTi"/>
+                            <constraint firstItem="fuF-s2-34Y" firstAttribute="top" secondItem="V5u-Me-ioY" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Pi3-aL-kkh"/>
+                            <constraint firstItem="Lpl-VM-g75" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="user" id="QeC-db-4HQ"/>
+                            <constraint firstItem="FHB-nv-U1U" firstAttribute="centerY" secondItem="Lpl-VM-g75" secondAttribute="centerY" type="user" id="Qnk-Un-LuH"/>
+                            <constraint firstAttribute="trailing" secondItem="Ohg-yH-HJh" secondAttribute="trailing" constant="20" symbolic="YES" type="user" id="R9D-Kn-qHO"/>
+                            <constraint firstAttribute="bottom" secondItem="Ohg-yH-HJh" secondAttribute="bottom" constant="17" type="user" id="RzD-t1-8Dq"/>
+                            <constraint firstItem="HhY-jK-5Um" firstAttribute="width" secondItem="8lv-Wn-xdN" secondAttribute="width" type="user" id="Sy2-yx-h4A"/>
+                            <constraint firstItem="FHB-nv-U1U" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="user" id="UPM-5U-jLQ"/>
+                            <constraint firstItem="fuF-s2-34Y" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="a4B-ON-FXw"/>
+                            <constraint firstAttribute="trailing" secondItem="fuF-s2-34Y" secondAttribute="trailing" constant="20" symbolic="YES" type="user" id="lR4-e1-qqR"/>
+                            <constraint firstItem="Lpl-VM-g75" firstAttribute="top" secondItem="fuF-s2-34Y" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="mhh-cQ-g5A"/>
+                            <constraint firstAttribute="trailing" secondItem="Lpl-VM-g75" secondAttribute="trailing" constant="20" symbolic="YES" type="user" id="mnu-7x-RAm"/>
+                            <constraint firstItem="8lv-Wn-xdN" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="user" id="q2w-Zi-yIN"/>
+                            <constraint firstItem="FHB-nv-U1U" firstAttribute="centerX" secondItem="Lpl-VM-g75" secondAttribute="centerX" type="user" id="uxy-Sp-uH8"/>
+                            <constraint firstItem="V5u-Me-ioY" firstAttribute="height" secondItem="Lpl-VM-g75" secondAttribute="height" type="user" id="yeb-tG-KDI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cacheImage" destination="Lpl-VM-g75" id="N7U-0m-lCL"/>
+                        <outlet property="cacheIndicator" destination="FHB-nv-U1U" id="LNG-iq-ClA"/>
+                        <outlet property="serverImage" destination="V5u-Me-ioY" id="Ojw-8D-YGZ"/>
+                        <outlet property="serverIndicator" destination="loO-aK-brp" id="qoi-6L-hLz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91" y="45"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="clearCache:"/>
+                <relationship kind="action" name="loadFromCache:"/>
+                <relationship kind="action" name="loadFromServer:"/>
+                <relationship kind="action" name="testCache:"/>
+                <relationship kind="outlet" name="cacheImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cacheIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="serverImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="serverIndicator" candidateClass="UIActivityIndicatorView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
